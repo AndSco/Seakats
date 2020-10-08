@@ -1,0 +1,29 @@
+Approach has to change. PWA processes are killed in the background, hence a new server-based approach might be better. 
+
+Try to create a model of a session, save a session in DB each time the user submits the paddle form and write a function going through all active sessions and updating and managing them.
+
+Re geo-fencing, impossible to do in background in PWA. Alternatives would be cordova/ionic, react native or just specify the position sent was the last received when the user was on the app, maybe sending the time when this was fetched. 
+
+Cordova best bet, but then it means having to go through the App stores (complicated and expensive). Alternative is to look into Service Worker customisation and try in-app notifications (for chrome at least)
+
+FB Messenger no - Testing now Twilio whatsapp SANDBOX - 15 EURO CREDIT ONLY!
+
+// 
+
+Other problem: free heroku account puts server to sleep evety 30mins. Try to open a new free account dedicated to this app and keep server alive costantly by sending pings with various options available. (fixed with pinging the server)
+
+Otherwise, get a hobby account that never puts server to sleep - 7dollars a month
+
+
+//
+
+15/09/2019 - I installed twilio as a whatsapp test. remember to remove from npm in case
+
+21/09/2019 - Removed session deleting from deleteSession in session handlers. Instead, setting it as non active. in case, function to remove non active when starting
+
+Push notifications - process now handled as soon as the paddlePlanner mounts, with useEffect []
+
+//
+Include feature to organise paddle and invite others
+Consider socket.io chat
+filter out current paddler from notificiations about himself

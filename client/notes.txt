@@ -1,0 +1,2 @@
+Had to move DismissKeyboard wrapper in the ScreenView warapping element. It did not work on the single screens.
+Now included as a feature of the ScreenView itself
